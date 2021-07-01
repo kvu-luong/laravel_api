@@ -130,3 +130,14 @@ Writing controller
 php artisan make:controller <name-of-controller> 
 ```
 
+### Http status
+200: OK
+201: Object Created
+204: No content. When an action was executed successfully, but there is no content to return.
+206: Partial content. Useful when you have to return a paginated list of resources.
+400: Bad request. The standard option for requests that fail to pass validation.
+401: Unauthorized. The user needs to be authenticated.
+403: Forbidden. The user is authenticated, but does not have the permissions to perform an action.
+404: Not found. This will be returned automatically by Laravel when the resource is not found.
+500: Internal server error.
+503: Service unavailable.
