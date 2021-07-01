@@ -122,4 +122,11 @@ Then we just need to run command
 
 ```php artisan db:seed```
 
+### Routes and Controller
+Writing route in ```<app-name>/route/api.php```
+
+Writing controller
+```
+php artisan make:controller <name-of-controller> 
+```
 
