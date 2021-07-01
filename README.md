@@ -60,3 +60,66 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Self Notes
+
+### Install Laravel environment
+```
+composer global require laravel/installer
+```
+Note: To run the command below with laravel, we need to at path of laravel to environment.
+Ater running the above command, we will see the change directory message. Go to this directory and then copy link.
+
+Windows:
+```C:\Users\MY MSI\AppData\Roaming\Composer\vendor\bin```
+### Create new project
+```
+laravel new <app-name> 
+```
+Or
+```
+composer create-project --prefer-dist laravel/laravel <app-name>
+```
+To checking version of Laravel
+```
+php artisan --version 
+```
+### Run Laravel Local
+```
+cd <app-name>
+php artisan serve
+```
+### Create database for the project
+Local, we may use xampp to create a database
+### Create a model
+```
+php artisan make:model <name-of-modal> -m
+```
+-m: is an option that is  short for ```--migration``` and  it tells Artisan create one for our model
+migrations: ```<app-name>/database/migrations```
+model: ```<app-name>/Models```
+
+Run command to generate database from migrations
+```
+php artisan migrate 
+```
+### Create dummy data for testing
+```
+php artisan make:seeder <file-seeder-name> 
+```
+Directory: ```/database/seeds```
+
+Reference: https://laravel.com/docs/8.x/seeding
+
+To run specific seeder:
+```
+php artisan db:seed --class=<file-seeder-name> 
+```
+To configure run 1 time for all seeder.
+Go to file: ```database/seeder/DatabaseSeeder```.
+Then we just need to run command
+
+```php artisan db:seed```
+
+
