@@ -16,7 +16,7 @@ class RegisterController extends Controller
            'name' => 'required|string',
            'email' => 'required|string|email|unique:users',
            'password' => 'required|string|confirmed',
-           'password_confirmation' => 'required|string',
+           'password_confirmation' => 'string',
         ]);// all field are required.
 
         event(new Registered($user = $this->create($request->all())));

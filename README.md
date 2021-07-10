@@ -169,3 +169,21 @@ If you want to custom error 404 page, we just need to create file in resources/v
 Flow: user/pass -> register
 user/pass -> login ( server return api_key)
 Then when user requests a action, they need to send request with token=<api_key>
+
+### Test
+Test command after setup with sqlite
+``` 
+composer test
+```
+Create factory before test
+```
+php artisan make:factory <name-of-factory> 
+```
+Create test file
+```
+php artisan make:test <name-of-test-file>
+```
+Fix error factory with command
+``` 
+composer require laravel/legacy-factories
+```
