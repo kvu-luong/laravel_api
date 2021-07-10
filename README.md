@@ -187,3 +187,11 @@ Fix error factory with command
 ``` 
 composer require laravel/legacy-factories
 ```
+After test need to create database again
+``` 
+php artisan migrate
+```
+for example database
+```
+php artisan db:seed 
+```
