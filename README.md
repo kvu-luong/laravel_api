@@ -150,3 +150,8 @@ php artisan make:controller <name-of-controller>
 500: Internal server error.
 
 503: Service unavailable.
+
+### Handle error 404 return json
+[laravel_error_document](https://laravel.com/docs/8.x/errors)
+
+If you want to custom error 404 page, we just need to create file in resources/views/errors/404.blade.php
