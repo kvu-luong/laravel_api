@@ -104,6 +104,15 @@ Run command to generate database from migrations
 ```
 php artisan migrate 
 ```
+
+Adding new column to exist table
+```
+php artisan make:migration --table=<name-of-table> <name-of-new-migration>
+```
+Then add column in migration file. After that we just need to run again 
+```
+php artisan migrate 
+```
 ### Create dummy data for testing
 ```
 php artisan make:seeder <file-seeder-name> 
@@ -155,3 +164,8 @@ php artisan make:controller <name-of-controller>
 [laravel_error_document](https://laravel.com/docs/8.x/errors)
 
 If you want to custom error 404 page, we just need to create file in resources/views/errors/404.blade.php
+
+### Register Feature
+Flow: user/pass -> register
+user/pass -> login ( server return api_key)
+Then when user requests a action, they need to send request with token=<api_key>
